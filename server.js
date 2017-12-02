@@ -6,6 +6,7 @@ const hbs = require('hbs');
 
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 var app = express();
 
 // adding support for partials
@@ -83,4 +84,4 @@ app.get('/bad', (req, res) => {
 });
 
 // bind application to port on a machine
-app.listen(3000);
+app.listen(port);
